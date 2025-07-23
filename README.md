@@ -33,7 +33,11 @@ A smart Streamlit-based web app that uses powerful LLM agents to extract structu
   "agenda": ["Item 1", "Item 2"],
   "key_discussions": ["Discussion point 1", "Discussion point 2"],
   "decisions_made": ["Decision 1", "Decision 2"],
-  "action_items": [
+  "action_items": 
+
+https://github.com/user-attachments/assets/537639ba-47d5-425a-ac56-19bef5a7c4ac
+
+[
     {
       "task": "Task description",
       "owner": "Person responsible",
