@@ -1,6 +1,6 @@
 # 🧠 Zoom Transcript Summarizer
 
-A smart Streamlit-based web app that uses powerful LLM agents to extract structured meeting summaries (including date, attendees, key discussions, decisions, and action items) from Zoom or video meeting transcripts.
+A smart multi-agent AI app that converts raw Zoom or video call transcripts into structured, ready-to-use meeting summaries in JSON format. Built using CrewAI, LangChain, Pydantic, and Streamlit, powered by OpenRouter's DeepSeek R1 LLM
 
 ---
 
