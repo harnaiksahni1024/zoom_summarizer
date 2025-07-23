@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.000
+Host: Welcome everyone, today we’ll review the Q2 project updates.
+
+00:00:05.100 --> 00:00:10.200
+Alice: Thanks for organizing this meeting. I’ll start with the marketing campaign…
+
+00:00:10.300 --> 00:00:20.500
+Alice: …we’ve seen a 15% leap in engagement since we launched the new ad creatives.
+
+00:00:20.600 --> 00:00:25.000
+Bob: That’s impressive. Have you tracked conversions from those channels?
+
+00:00:25.100 --> 00:00:35.000
+Alice: Yes. Over the last three weeks, conversions rose from 2.3% to 3.1%, mainly via social media.
+
+00:00:35.100 --> 00:00:40.000
+Host: Great. Charlie, how are we doing on the product roadmap?
+
+00:00:40.100 --> 00:00:55.000
+Charlie: We’re finalizing the beta release for the dashboard tool. The UI is 90% complete. We're targeting early August for soft launch.
+
+00:00:55.100 --> 00:01:05.000
+Denise: Will that include user analytics? We need that for client feedback.
+
+00:01:05.100 --> 00:01:15.000
+Charlie: Yes, core metrics are incorporated. We’re integrating Heatmap and Session Replay before launch.
+
+00:01:15.100 --> 00:01:25.000
+Bob: Any blockers on the backend side?
+
+00:01:25.100 --> 00:01:35.000
+Charlie: Just a data‑sync issue with legacy DB. We expect to fix that by next week.
+
+… [continues up to 00:20:00]
+
+00:19:50.000 --> 00:19:55.000
+Host: Okay, let’s recap action items.
+
+00:19:55.100 --> 00:20:00.000
+Host: Alice to share the full marketing report, Charlie to finalize beta timeline, Denise to draft test‑plan.
+
+00:20:00.100 --> 00:20:05.000
+Host: Thanks everyone. Meeting adjourned.
+
