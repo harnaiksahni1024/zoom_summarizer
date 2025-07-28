@@ -1,47 +1,53 @@
-# 🧠 Zoom Transcript Summarizer
+# 📊 Zoom Transcript Summarizer
 
-A smart multi-agent AI app that converts raw Zoom or video call transcripts into structured, ready-to-use meeting summaries in JSON format. Built using CrewAI, LangChain, Pydantic, and Streamlit, powered by OpenRouter's DeepSeek R1 LLM
+A smart multi-agent AI app that converts raw Zoom, Meet, or Teams transcripts into **structured, human-readable meeting summaries** in Markdown format. Built using **CrewAI**, **LangChain**, **Streamlit**, and powered by **DeepSeek R1 via OpenRouter**.
 
 ---
 
 ## 🚀 Features
 
-✅ Upload `.txt` transcripts (Zoom/Meet/Teams)  
-✅ Extracts clean, human-readable summaries  
-✅ Outputs structured JSON matching a defined schema  
-✅ Uses two intelligent agents:
-- 📌 `Transcript Interpreter` — summarizes key meeting points
-- 📌 `JSON Structurer` — converts into clean JSON for downstream use
+✅ Upload `.txt` transcripts from Zoom, Google Meet, Microsoft Teams, etc.  
+✅ Extracts clean, concise meeting summaries with key sections  
+✅ Outputs **Markdown summaries** formatted with **emojis and tables**  
+✅ Uses **two intelligent agents** for accurate processing:
+
+| Agent Name              | Function                                                   |
+|-------------------------|------------------------------------------------------------|
+| 🧠 Transcript Interpreter | Parses messy transcripts into structured bullet summaries  |
+| ✍️ Markdown Formatter     | Converts bullet summaries into polished Markdown output    |
 
 ✅ Built with:
 - [Streamlit](https://streamlit.io/)
-- [CrewAI](https://github.com/joaomdmoura/crewAI)
-- [OpenRouter (DeepSeek R1)](https://openrouter.ai/)
+- [CrewAI](https://www.crewai.io/)
+- [OpenRouter](https://openrouter.ai/) (DeepSeek R1)
 - [LangChain](https://www.langchain.com/)
 - [Pydantic](https://docs.pydantic.dev/)
 
 ---
 
-## 📂 Output JSON Schema
+## 📂 Example Output
 
-```json
-{
-  "date": "YYYY-MM-DD",
-  "time": "10:00 AM",
-  "attendees": ["Name1", "Name2"],
-  "project": "Project Title",
-  "agenda": ["Item 1", "Item 2"],
-  "key_discussions": ["Discussion point 1", "Discussion point 2"],
-  "decisions_made": ["Decision 1", "Decision 2"],
-  "action_items": 
+```markdown
+# 📝 Meeting Summary
+- 📅 **Date**: 2025-07-28
+- ⏰ **Time**: 10:00 AM
+- 📌 **Project**: AI Zoom Summarizer
+- 👥 **Attendees**: Alice, Bob, Charlie
 
-https://github.com/user-attachments/assets/537639ba-47d5-425a-ac56-19bef5a7c4ac
+## 📋 Agenda
+- Discuss Zoom AI summary
+- Deployment plan
 
-[
-    {
-      "task": "Task description",
-      "owner": "Person responsible",
-      "due_date": "YYYY-MM-DD"
-    }
-  ]
-}
+## 💬 Key Discussions
+- Token usage optimization
+- Markdown formatting improvements
+
+## ✅ Decisions Made
+- Use DeepSeek for transcript processing
+- Automate JSON to Markdown conversion
+
+## 📌 Action Items
+| Task                        | Owner   | Due Date     |
+|----------------------------|---------|--------------|
+| Refactor summarizer logic  | Alice   | 2025-08-01   |
+| Add download option in UI  | Charlie | 2025-08-02   |
