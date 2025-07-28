@@ -70,7 +70,7 @@ def run_summary_agent(file_path: str):
     markdown_formatter =Agent(
         role = "Markdown Formatter",
         goal = "Convert structured meeting summary JSON into Markdown",
-         backstory=(
+        backstory=(
         "You're great at turning structured meeting information into beautiful, readable Markdown "
         "for human consumption. Your output will be used in reports and shared documentation."
     ),
@@ -98,9 +98,7 @@ def run_summary_agent(file_path: str):
     #  Task 2: Structure into JSON
     structure_task = Task(
     description=(
-                 "You are provided the transcript below.\n\n"
-            "{transcript} \n\n "
-            "You will get a bullet-point meeting summary.\n\n"
+    "Given the summary :\n\n {{tasks.interpret_task.output}}.\n\n"
     "Your task is to convert it into a valid JSON object with the following fields:\n"
     "- date (YYYY-MM-DD)\n"
     "- time (e.g., 10:00 AM)\n"
@@ -118,13 +116,14 @@ def run_summary_agent(file_path: str):
     expected_output="Respond with ONLY a valid JSON object that strictly matches the schema. "
   "DO NOT include any markdown, explanation, commentary, or extra text. "
   "Output MUST start with '{' and end with '}'.",
+   
     output_class=MeetingSummary,
     agent=summarizer
     )
 
     markdown_task = Task(
     description=(
-        "You're given a structured JSON object representing a meeting summary. "
+        "You're given a structured JSON meeting summary:\n\n {{tasks.structure_task.output}}\n\n "
         "Convert it into well-formatted Markdown using the following structure:\n\n"
         "###  Meeting Summary\n"
         "- **Date**: <date>\n"
@@ -147,6 +146,7 @@ def run_summary_agent(file_path: str):
     ),
     agent=markdown_formatter,
     expected_output="Markdown string of the formatted summary. No explanations.",)
+    
 
 
 
@@ -162,14 +162,9 @@ def run_summary_agent(file_path: str):
     inputs={
         "transcript": transcript_text
     })
-    summary_json = structure_task.output # MeetingSummary object
-    markdown_output = markdown_task.output  # Markdown string
-
-    return {
-    "json": summary_json,
-    "markdown": markdown_output
-    }
-
+   
+  
+    return {'final_output':result}
 
    
 

@@ -1,5 +1,5 @@
 import streamlit as st
-from agentts import run_summary_agent
+from crew import run_summary_agent
 import os
 
 st.set_page_config(page_title='Zoom Transcript Summarizer')
@@ -29,13 +29,9 @@ if upload_file:
     if st.button("Summarize Zoom Call"):
         with st.spinner("Running agents to summarize the meeting..."):
             summary = run_summary_agent(save_file)
-
-        summary_json = summary['json']
-        summary_markdown = summary['markdown']
-
-        st.subheader("📄 Summary of the Meeting")
-        st.json(summary.dict() if hasattr(summary, 'dict') else summary_json)
-
-        st.subheader("Markdown Summary")
-        st.markdown(summary_markdown)
         
+        
+        summary_markdown = summary['final_output']
+
+        st.markdown(summary_markdown)
+    
