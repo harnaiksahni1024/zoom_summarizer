@@ -1,5 +1,5 @@
 import streamlit as st
-from crew import run_summary_agent
+from agents import run_summary_agent
 import os
 
 st.set_page_config(page_title='Zoom Transcript Summarizer')
